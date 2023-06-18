@@ -3,10 +3,12 @@ import TextField from "@mui/material/TextField";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import TableContainer from "@mui/material/TableContainer";
 import Paper from '@mui/material/Paper';
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import {
   Box,
   Button,
   FormControl,
+  IconButton,
   InputLabel,
   MenuItem,
   Select,
@@ -76,7 +78,7 @@ function AppSessions() {
      };
   return (
       <>
-          <Box sx={{display:"flex",gap:1,mb:2}}>
+          <Box sx={{ display: "flex", gap: 1, mb: 2 }}>
               <TextField
                   id="outlined-basic"
                   label="uid"
@@ -144,7 +146,12 @@ function AppSessions() {
               />
           </Box>
 
-          <Button variant="contained" type="submit" onClick={() => fetchData()} sx={{mb:2}}>
+          <Button
+              variant="contained"
+              type="submit"
+              onClick={() => fetchData()}
+              sx={{ mb: 2 }}
+          >
               Search
           </Button>
           <br></br>
@@ -164,6 +171,14 @@ function AppSessions() {
                               <>
                                   <TableCell align="right">
                                       {data[0].user_id}
+                                      <IconButton
+                                          size="small"
+                                          onClick={() =>
+                                              copyToClipBoard(data[0].user_id)
+                                          }
+                                      >
+                                          <ContentCopyIcon fontSize="small" />
+                                      </IconButton>
                                   </TableCell>
                                   <TableCell align="right">
                                       {data[0].uid}

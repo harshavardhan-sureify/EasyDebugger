@@ -45,6 +45,9 @@ const Quotes = () => {
     };
 
     const fetchData = () => {
+        if(!userId && !timeStampType){
+            return;
+        }
         const urlParams = new URLSearchParams();
         if (!!userId) urlParams.append("user_id", userId);
         if (!!timeStampType && !!startDate)

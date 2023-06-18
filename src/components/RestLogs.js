@@ -1,7 +1,5 @@
 import * as React from "react";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { TableCell, TextField } from "@mui/material";
 import { Button } from "@mui/material";
@@ -105,7 +103,7 @@ export default function Restlogs() {
             })
             .then((response) => {
                 console.log(response);
-                if (response.length == 0) {
+                if (response.length === 0) {
                     setEmpty(true);
                 }
                 setoutput(response);
