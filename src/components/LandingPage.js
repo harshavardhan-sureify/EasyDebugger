@@ -49,8 +49,7 @@ export default function ClippedDrawer() {
         </Box>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <Toolbar />
-        <RestLogs />
+        {/* <Toolbar /> */}
       </Box>
     </Box>
   );

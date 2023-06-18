@@ -69,12 +69,14 @@ const Quotes = () => {
     };
 
     return (
-        <Box sx={{ p: 2 }}>
+        <Box sx={{width:'100%'}}>
             <Box
                 sx={{
                     display: "flex",
                     justifyContent: "space-evenly",
                     alignItems: "center",
+                    width:"100%",
+                    gap:1
                 }}
             >
                 <TextField
